@@ -30,7 +30,7 @@ sympy и понял.... что все вообще-то написано.
 ## 3x3:
 ![image](https://user-images.githubusercontent.com/61281668/134804010-11a79727-b8f2-4172-b99b-7cef2d265367.png)
 
-## 4х4:
+## 4х4 NxN:
 https://www.sympy.org/en/index.html
 
 Основные источники, которые помогли при написании:
