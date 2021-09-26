@@ -33,5 +33,12 @@ sympy и понял.... что все вообще-то написано.
 ## 4х4:
 https://www.sympy.org/en/index.html
 
+Основные источники, которые помогли при написании:
+https://scask.ru/f_book_vdif.php?id=37
+http://mathhelpplanet.com/static.php?p=ldu-s-peremennymi-koeffitsientami
+https://publikacija.ru/images/PDF/2018/28/vosstanovlenie-linejnogo.pdf
+https://matica.org.ua/metodichki-i-knigi-po-matematike/lineinaia-algebra-uchebnoe-posobie-z-i-andreeva/06-opredeliteli-n-go-poriadka
+http://twt.mpei.ac.ru/math/content.html
+
 ## Result:
 ![image](https://user-images.githubusercontent.com/61281668/134803798-6f2b3159-4c60-4244-a540-460dd9727972.png)
