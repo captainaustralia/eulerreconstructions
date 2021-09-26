@@ -10,6 +10,7 @@ funcs = {str(i): "y" + "'" * i for i in range(20)}
 matrix = []
 first_row = []
 
+
 def find_determinate(order, array):
     matrix = array[1::]
     new_matrix = []
@@ -49,7 +50,7 @@ def find_determinate(order, array):
 
 def find_euler(order=int(input('Enter the order of the equation: '))):
     # порядок уравнения соответствует количеству решений
-    visual_row = '\t' * 20 + 'fundamental decision system'.upper() + '\n'
+    visual_mtx = '\t' * 20 + 'fundamental decision system'.upper() + '\n'
     row, col = order, order
     roots = list(map(int, input('Enter characteristic roots (separated by a space): ').split()))
     roots = [x ** i for i in roots]
@@ -80,9 +81,9 @@ def find_euler(order=int(input('Enter the order of the equation: '))):
                 space = 15
                 if len(str(matrix[i][j])) > 1:
                     space = space - (len(str(matrix[i][j])) - 2)
-                visual_row += "|    " + str(matrix[i][j]).replace("**", '^').replace("*", '') + " " * space + '|'
-            visual_row += '\n'
-        print(visual_row)
+                visual_mtx += "|    " + str(matrix[i][j]).replace("**", '^').replace("*", '') + " " * space + '|'
+            visual_mtx += '\n'
+        print(visual_mtx)
 
         find_determinate(order, matrix)
 
