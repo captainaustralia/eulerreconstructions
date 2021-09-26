@@ -10,12 +10,6 @@ funcs = {str(i): "y" + "'" * i for i in range(20)}
 matrix = []
 first_row = []
 
-
-def draw_matrix(array):
-    for i in array():
-        print(i)
-
-
 def find_determinate(order, array):
     matrix = array[1::]
     new_matrix = []
