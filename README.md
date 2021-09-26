@@ -33,4 +33,5 @@ sympy и понял.... что все вообще-то написано.
 ## 4х4:
 https://www.sympy.org/en/index.html
 
+## Result:
 ![image](https://user-images.githubusercontent.com/61281668/134803798-6f2b3159-4c60-4244-a540-460dd9727972.png)
