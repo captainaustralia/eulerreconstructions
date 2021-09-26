@@ -24,4 +24,13 @@
 sympy и понял.... что все вообще-то написано.
 
 
+## 2x2:
+Главная диагональ - побочная диагональ
+
+## 3x3:
+![image](https://user-images.githubusercontent.com/61281668/134804010-11a79727-b8f2-4172-b99b-7cef2d265367.png)
+
+## 4х4:
+https://www.sympy.org/en/index.html
+
 ![image](https://user-images.githubusercontent.com/61281668/134803798-6f2b3159-4c60-4244-a540-460dd9727972.png)
