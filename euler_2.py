@@ -62,7 +62,6 @@ def euler(order=int(input('Введите порядок уравнения: '))
     for i in range(len(memory_eq)):
         rofl = memory_eq[i].split()
         memory_eq_dict[str(len(memory_eq) - i)] = regrouping(rofl, len(memory_eq))
-    print(memory)
     if 'k' not in memory.keys():
         memory['k'] = 0
     memory['k1'] = memory['k']
@@ -78,8 +77,7 @@ def euler(order=int(input('Введите порядок уравнения: '))
                     'k' + str(order - i)]  # 1 * '4'['k3'] = 1 * 6, 0 + 6 = 6
         alphas.append(abs(lambda_i - sum_i))
 
-    print(alphas)
-    print(a)
+
     while True:
         counter += 1
         if counter == len(a) - 1 and not a[counter].isdigit():
