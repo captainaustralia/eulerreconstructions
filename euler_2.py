@@ -75,7 +75,7 @@ def euler(order=int(input('Введите порядок уравнения: '))
             else:
                 sum_i += alphas[j - 1] * memory_eq_dict[str(order - j + 1)][
                     'k' + str(order - i)]  # 1 * '4'['k3'] = 1 * 6, 0 + 6 = 6
-        alphas.append(abs(lambda_i - sum_i))
+        alphas.append(lambda_i - sum_i)
 
 
     while True:
