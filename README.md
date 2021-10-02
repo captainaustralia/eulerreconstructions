@@ -19,6 +19,8 @@ y''''' =  D(D - 1)(D - 2)( D - 3)( D - N_max - 1)
 6. Строим  следующий цикл:
 (Основной принцип alpha_1 = 1 -> default, alpha_2 = lambda_2 - СУММА ВСЕХ ЗНАЧЕНИЙ ПРИ КОЭФФИЦИЕНТАХ D ИЗ МАССИВА ПУНКТА 5 * АЛЬФЫ ПРИ ЭТИХ РАСКРЫТИЯХ
 ![image](https://user-images.githubusercontent.com/61281668/135714894-63021fa2-ff56-4b02-8c8f-97823a76a45d.png)
+![image](https://user-images.githubusercontent.com/61281668/135715032-2884ee02-2017-47e1-adab-c62e19cef4be.png)
+
 7. В массиве alphas будем содержать все нужные нам значения
 #end
 
