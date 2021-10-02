@@ -22,7 +22,7 @@ y''''' =  D(D - 1)(D - 2)( D - 3)( D - N_max - 1)
 ![image](https://user-images.githubusercontent.com/61281668/135715032-2884ee02-2017-47e1-adab-c62e19cef4be.png)
 
 7. В массиве alphas будем содержать все нужные нам значения
-#end
+## end
 
 
 
