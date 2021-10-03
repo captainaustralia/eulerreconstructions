@@ -9,7 +9,7 @@ subs_dict = {str(x ** i): k for i in range(100)}
 
 
 def print_result(alphas, order):
-    print(alphas)
+    print('COEFFICIENTS: : ', alphas)
     result_string = ''
     for i in range(len(alphas)):
         mark = '+'
@@ -70,7 +70,7 @@ def euler(order=int(input('Введите порядок уравнения: '))
     a = str(a).replace('*', '')
     a = a.split()
     if a[-1].isdigit():
-        last_alpha = a[-1]
+        last_alpha = a[-2] + str(a[-1])
     memory = regrouping(a, order)
 
     memory_eq = []  # save all D(D-1)(D-2)(D-3)....... for all orders
@@ -99,6 +99,7 @@ def euler(order=int(input('Введите порядок уравнения: '))
                     'k' + str(order - i)]  # 1 * '4'['k3'] = 1 * 6, 0 + 6 = 6
         alphas.append(lambda_i - sum_i)
     alphas.append(int(last_alpha))
+    print('EULER EQUATION:')
     print_result(alphas, order)
 
 
