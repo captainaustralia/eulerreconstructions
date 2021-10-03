@@ -8,26 +8,47 @@ res = []
 subs_dict = {str(x ** i): k for i in range(100)}
 
 
+def print_result(alphas, order):
+    print(alphas)
+    result_string = ''
+    for i in range(len(alphas)):
+        mark = '+'
+        if alphas[i] == 0:
+            continue
+        if alphas[i] > 0:
+            mark = ' + '
+        else:
+            mark = ' '
+        if i == 0:
+            result_string += 'x^' + str(len(alphas) - i - 1) + 'y' + "'" * (len(alphas) - i - 1)
+        elif len(alphas) - i - 1 == 0:
+            result_string += mark + str(alphas[i]) + 'y'
+        else:
+            result_string += mark + str(alphas[i]) + 'x^' + str(len(alphas) - i - 1) + 'y' + "'" * (len(alphas) - i - 1)
+    print(result_string, '= 0 or ....')
+
+
 def regrouping(array_name, order):
     memory = {}
+    znak = ''
     for i in array_name:
         local_memory = ''
         if i == '-' or i == '+':
+            znak = i
             continue
         for j in range(len(i)):
             if i[j] == 'k' and j == 0:
-                memory[i] = 1
+                memory[i] = int(znak + str(1))
                 break
             if i[j].isdigit():
                 local_memory += i[j]
             else:
-                memory[i[j::]] = int(local_memory)
+                memory[i[j::]] = int(znak + local_memory)
                 break
 
     for i in range(2, order):
         if str(k) + str(i) not in memory.keys():
             memory[str(k) + str(i)] = 0
-
     return memory
 
 
@@ -48,8 +69,9 @@ def euler(order=int(input('Введите порядок уравнения: '))
     print('Характеристическое уравнение :', a, ' = 0')
     a = str(a).replace('*', '')
     a = a.split()
+    if a[-1].isdigit():
+        last_alpha = a[-1]
     memory = regrouping(a, order)
-    # print(memory, 'LAMBDAS')
 
     memory_eq = []  # save all D(D-1)(D-2)(D-3)....... for all orders
     for i in range(order):
@@ -76,31 +98,8 @@ def euler(order=int(input('Введите порядок уравнения: '))
                 sum_i += alphas[j - 1] * memory_eq_dict[str(order - j + 1)][
                     'k' + str(order - i)]  # 1 * '4'['k3'] = 1 * 6, 0 + 6 = 6
         alphas.append(lambda_i - sum_i)
-
-
-    while True:
-        counter += 1
-        if counter == len(a) - 1 and not a[counter].isdigit():
-            z = a[counter]
-            z = z[0:-1] + 'xy'
-            a[counter] = z
-            break
-        if a[counter] == '+' or a[counter] == '-':
-            continue
-        elif a[counter].isdigit():
-            a[counter] += 'y'
-            break
-        else:
-            a[counter] = str(alphas[alphas_counter]) + 'x' + '^' + str(((len(alphas)) - alphas_counter)) + 'y' + "'" * (
-                    (len(alphas)) - alphas_counter)
-        if counter == len(a) - 1:
-            break
-        alphas_counter += 1
-    result = ''
-    for i in a:
-        result += ' ' + i
-    print('\t' * 10 + 'EULER FORM')
-    print(result[2::], '= 0 or ....')
+    alphas.append(int(last_alpha))
+    print_result(alphas, order)
 
 
 euler()
